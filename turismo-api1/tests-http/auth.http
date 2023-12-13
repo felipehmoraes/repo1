@@ -1,0 +1,12 @@
+
+@URL_BASE=http://localhost:8080
+
+
+### Cadastrar 1 pessoa
+POST {{URL_BASE}}/auth
+Content-Type: application/json
+
+{
+    "username": "outro",
+    "password": "1234"
+}

@@ -1,0 +1,47 @@
+
+@URL_BASE=http://localhost:8080
+@TOKEN=zzzzzzzzzzzzzzzzzzzzzzzzz
+
+
+
+
+### Cadastrar 1 passeio
+POST {{URL_BASE}}/passeio
+Content-Type: application/json
+
+{   
+    "destino":"fdfd",
+    "itinerario":"gf-cafe-parque",
+    "preco":"2570"
+  
+
+}
+
+
+### obter todos os passeios
+GET {{URL_BASE}}/passeio
+
+### Obter passeio pelo ID
+GET {{URL_BASE}}/passeio/a41d1cf3-1bde-4737-a8c8-dd0d36355924
+Content-Type: application/json
+
+### Deletar passeio pelo ID
+DELETE  {{URL_BASE}}/passeio/a41d1cf3-1bde-4737-a8c8-dd0d36355924
+Content-Type: application/json
+
+
+### alterar passeio pela ID
+PUT {{URL_BASE}}/passeio/bb696a90-cca1-4733-b697-511fffa6b130
+Content-Type: application/json
+
+{   
+    "destino":"amor",
+    "itinerario":"gf-cafe-parque",
+    "preco":"2570"
+  
+
+}
+
+### pages?size=20&page=2&sort=email&direction=DESC
+GET {{URL_BASE}}/passeio/pages
+Content-Type: application/json

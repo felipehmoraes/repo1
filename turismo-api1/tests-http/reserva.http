@@ -1,0 +1,43 @@
+@URL_BASE=http://localhost:8080
+@TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBUEkgYXV0aGVudGljYXRpb24iLCJ1c2VybmFtZSI6Im91dHJvIiwiaWF0IjoxNjk1ODQwNjEyLCJleHAiOjE2OTU4NDQyMTIsImlzcyI6IlVURlBSIn0.j_ZkNp8gw5wxr4VOZiIRL0K0-Pko9_CUmdORqf77s1U
+
+@ID=6a27afaf-890a-4ea2-bde0-c4b617f7412e
+
+### Cadastrar 1 reserva
+POST {{URL_BASE}}/reserva
+Content-Type: application/json
+
+{   
+    "quantidadePessoas":"25",
+     "dataReserva": "1960-01-01T00:00"
+
+}
+  
+  
+### obter todos os passeios
+GET {{URL_BASE}}/reserva
+
+### Obter reserva pelo ID
+GET {{URL_BASE}}/reserva/{{ID}}
+Content-Type: application/json
+
+### Deletar reserva pelo ID
+DELETE  {{URL_BASE}}/reserva/{{ID}}
+Content-Type: application/json
+
+
+### alterar reserva pela ID
+PUT {{URL_BASE}}/reserva/{{ID}}
+Content-Type: application/json
+
+{   
+    "preco":"800",
+    "dataReserva": "1960-01-01T00:00"
+  
+
+}
+
+
+### pages?size=20&page=2&sort=email&direction=DESC
+GET {{URL_BASE}}/reserva/pages
+Content-Type: application/json

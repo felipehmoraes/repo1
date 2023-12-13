@@ -1,0 +1,48 @@
+@URL_BASE=http://localhost:8080
+@TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBUEkgYXV0aGVudGljYXRpb24iLCJ1c2VybmFtZSI6Im91dHJvIiwiaWF0IjoxNjk1ODQwNjEyLCJleHAiOjE2OTU4NDQyMTIsImlzcyI6IlVURlBSIn0.j_ZkNp8gw5wxr4VOZiIRL0K0-Pko9_CUmdORqf77s1U
+
+@ID=6a27afaf-890a-4ea2-bde0-c4b617f7412e
+
+### Cadastrar 1 pagamento
+POST {{URL_BASE}}/pagamento
+Content-Type: application/json
+
+{   
+    "valor":"15"
+}
+
+### Cadastrar 1 pagamento
+POST {{URL_BASE}}/pagamento
+Content-Type: application/json
+
+{   
+    "valor":"15",
+    "datapagamento":"1980-01-01T00:00",
+    "situacao":"pago",
+    "formapagamento":"cartao"
+
+}
+
+ 
+### obter todos os pagamentos
+GET {{URL_BASE}}/pagamento
+
+### Obter pagamento pelo ID
+GET {{URL_BASE}}/reserva/{{ID}}
+Content-Type: application/json
+
+### Deletar pagamento pelo ID
+DELETE  {{URL_BASE}}/pagamento/{{ID}}
+Content-Type: application/json
+
+
+### alterar pagamento pela ID
+PUT {{URL_BASE}}/reserva/{{ID}}
+Content-Type: application/json
+
+{   
+    "preco":"800",
+    "dataReserva": "1960-01-01T00:00"
+  
+
+}

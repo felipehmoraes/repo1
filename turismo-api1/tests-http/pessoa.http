@@ -1,0 +1,40 @@
+
+@URL_BASE=http://localhost:8080
+@TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBUEkgYXV0aGVudGljYXRpb24iLCJ1c2VybmFtZSI6Im91dHJvIiwiaWF0IjoxNjk1ODQwNjEyLCJleHAiOjE2OTU4NDQyMTIsImlzcyI6IlVURlBSIn0.j_ZkNp8gw5wxr4VOZiIRL0K0-Pko9_CUmdORqf77s1U
+### Obter todas as pessoas
+
+
+### pages?size=20&page=2&sort=email&direction=DESC
+GET {{URL_BASE}}/pessoa/pages
+Content-Type: application/json
+
+
+
+### Obter todas as pessoas
+GET {{URL_BASE}}/pessoa
+Content-Type: application/json
+
+### Obter pessoa pelo ID
+GET {{URL_BASE}}/pessoa/4d6f0cf2-2c72-429d-b314-3f79589aae93
+Content-Type: application/json
+
+
+
+### Cadastrar 1 pessoa
+POST {{URL_BASE}}/pessoa
+Content-Type: application/json
+
+{
+    "nome": "outro",
+    "email": "zoutre@bol.com.br",
+    "nascimento": "1960-01-01T00:00",
+    "password": "1234"
+}
+
+
+
+### obter todas as pessoas
+GET {{URL_BASE}}/pessoa
+
+### Deletar
+DELETE {{URL_BASE}}/pessoa/4d6f0cf2-2c72-429d-b314-3f79589aae93
